@@ -1,0 +1,42 @@
+.text-field {
+    -fx-text-alignment: center;
+    -fx-font-size: 36;
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-text-fill: white;
+}
+#hb {
+    -fx-background-color: rgba(0,0,0,0.5);
+}
+
+#tfid {
+    -fx-text-fill: #7ac0ea;
+}
+#correct {
+    -fx-text-fill: #1dd433;
+}
+#incorrect {
+    -fx-text-fill: red;
+}
+#pl {
+    -fx-background-image: url("PLflag.jpg");
+    -fx-background-size: 100% 100%;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+#ru {
+    -fx-background-image: url("RUflag.png");
+    -fx-background-size: 100% 100%;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+
+}
+#en {
+    -fx-background-image: url("UKflag.png");
+    -fx-background-size: 100% 100%;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+#bg {
+    -fx-background-image: url("geo.jpg");
+    -fx-background-size: 100% 100%;
+}

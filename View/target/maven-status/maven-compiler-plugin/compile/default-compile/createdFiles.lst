@@ -1,0 +1,4 @@
+controllers\Main.class
+controllers\StartWindowController.class
+controllers\SudokuController.class
+controllers\MainWindowController.class

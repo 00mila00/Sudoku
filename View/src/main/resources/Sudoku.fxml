@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="bg" fx:id="background" maxHeight="940.0" maxWidth="850.0" minHeight="940.0" minWidth="850.0" prefHeight="940.0" prefWidth="850.0" style="-fx-background-color: #5E96BA;" stylesheets="@Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SudokuController">
+   <children>
+      <GridPane fx:id="gridSudoku" alignment="CENTER" gridLinesVisible="true" layoutX="20.0" layoutY="20.0" maxHeight="810.0" maxWidth="810.0" minHeight="810.0" minWidth="810.0" prefHeight="810.0" prefWidth="810.0" style="-fx-border-color: black; -fx-background-color: rgba(240,240,240,0.3);" stylesheets="@Styles/Style.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Line endX="910.0" layoutX="-81.0" layoutY="292.0" startX="103.0" stroke="#4e83a4" strokeWidth="2.0">
+         <effect>
+            <Glow />
+         </effect></Line>
+      <Line endX="898.0" endY="289.0" layoutX="-71.0" layoutY="273.0" startX="93.0" startY="289.0" stroke="#4e83a4" strokeWidth="2.0">
+         <effect>
+            <Glow />
+         </effect></Line>
+      <Line endX="380.0" endY="484.0" layoutX="-90.0" layoutY="344.0" startX="380.0" startY="-322.0" stroke="#4e83a4" strokeWidth="2.0">
+         <effect>
+            <Glow />
+         </effect></Line>
+      <Line endX="580.0" endY="460.0" layoutX="-22.0" layoutY="368.0" startX="580.0" startY="-346.0" stroke="#4e83a4" strokeWidth="2.0">
+         <effect>
+            <Glow />
+         </effect></Line>
+      <HBox alignment="CENTER" layoutX="27.0" layoutY="838.0" prefHeight="82.0" prefWidth="798.0" spacing="25.0">
+         <children>
+            <ToggleButton fx:id="backButton" mnemonicParsing="false" onAction="#previous" prefHeight="35.0" prefWidth="120.0" style="-fx-base: #4e83a4;" text="%_Back">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="checkButton" mnemonicParsing="false" onAction="#check" prefHeight="35.0" prefWidth="120.0" style="-fx-base: #4e83a4;" text="%_Check">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="checking" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="contBut" mnemonicParsing="false" onAction="#continueGame" prefHeight="35.0" prefWidth="150.0" style="-fx-base: #4e83a4;" text="%_Continue" toggleGroup="$checking">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="closed" mnemonicParsing="false" onAction="#save" prefHeight="35.0" prefWidth="170.0" style="-fx-base: #4e83a4;" text="%_Save">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="closedb" mnemonicParsing="false" onAction="#saveDatabase" prefHeight="35.0" prefWidth="170.0" style="-fx-base: #4e83a4;" text="%_Save_base">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <Text fx:id="win" fill="#0d1517" layoutX="220.0" layoutY="83.0" stroke="#70ceda" strokeType="OUTSIDE" strokeWidth="3.0" text="%_Win" textAlignment="CENTER" visible="false" wrappingWidth="446.13671875">
+         <font>
+            <Font name="System Bold" size="62.0" />
+         </font>
+         <effect>
+            <Glow level="0.95" />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>

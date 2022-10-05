@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="bg" fx:id="anchor" maxWidth="850.0" minWidth="850.0" prefHeight="940.0" prefWidth="850.0" style="-fx-background-color: #5E96BA;" stylesheets="@Styles/Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StartWindowController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="900.0" prefWidth="810.0" style="-fx-background-color: rgba(0,0,0,0.7);">
+         <children>
+            <ToggleButton fx:id="startButton" layoutX="282.0" layoutY="553.0" mnemonicParsing="false" onAction="#loadSudoku" prefHeight="102.0" prefWidth="246.0" style="-fx-base: #4e83a4;" text="%_START" textFill="#000000b8">
+               <font>
+                  <Font name="Caladea" size="36.0" />
+               </font>
+            </ToggleButton>
+            <HBox alignment="CENTER" layoutX="160.0" layoutY="393.0" prefHeight="114.0" prefWidth="482.0" spacing="15.0">
+               <children>
+                  <ToggleButton fx:id="easyButton" mnemonicParsing="false" onAction="#setEasyLevel" prefHeight="60.0" prefWidth="130.0" style="-fx-base: #4e83a4;" text="%_Easy">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="poziom" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </ToggleButton>
+                  <ToggleButton fx:id="normalButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#setNormalLevel" prefHeight="60.0" prefWidth="171.0" style="-fx-base: #4e83a4;" text="%_Normal" toggleGroup="$poziom">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </ToggleButton>
+                  <ToggleButton fx:id="hardButton" layoutX="54.0" layoutY="10.0" mnemonicParsing="false" onAction="#setHardLevel" prefHeight="60.0" prefWidth="119.0" style="-fx-base: #4e83a4;" text="%_Hard" toggleGroup="$poziom">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </ToggleButton>
+               </children>
+            </HBox>
+            <Text fill="#1d1e22" layoutX="235.0" layoutY="232.0" stroke="#4e83a4" strokeType="OUTSIDE" strokeWidth="3.0" text="SUDOKU" wrappingWidth="339.755859375">
+               <font>
+                  <Font name="Caladea" size="87.0" />
+               </font>
+               <effect>
+                  <Glow level="0.7" />
+               </effect>
+            </Text>
+            <HBox alignment="CENTER" layoutX="-4.0" layoutY="272.0" prefHeight="100.0" prefWidth="810.0">
+               <children>
+                  <Text fill="#edf7ff" strokeType="OUTSIDE" strokeWidth="0.0" text="%_Subtitle">
+                     <font>
+                        <Font name="Cambria" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox layoutX="69.0" layoutY="841.0" prefHeight="27.0" prefWidth="130.0" spacing="10.0">
+               <children>
+                  <Button id="pl" fx:id="plButton" mnemonicParsing="false" onAction="#setPolish" prefHeight="24.0" prefWidth="34.0" stylesheets="@Styles/Style.css" />
+                  <Button id="en" fx:id="enButton" mnemonicParsing="false" onAction="#setEnglish" prefHeight="24.0" prefWidth="34.0" stylesheets="@Styles/Style.css" />
+                  <Button id="ru" fx:id="ruButton" mnemonicParsing="false" onAction="#setRussian" prefHeight="24.0" prefWidth="34.0" stylesheets="@Styles/Style.css" />
+               </children>
+            </HBox>
+            <ToggleButton layoutX="663.0" layoutY="842.0" mnemonicParsing="false" onAction="#loadAuthors" style="-fx-base: #4e83a4;" text="%_Authors" />
+            <ToggleButton layoutX="208.0" layoutY="718.0" mnemonicParsing="false" onAction="#load" prefHeight="44.0" prefWidth="180.0" style="-fx-base: #4e83a4;" text="%_Open">
+               <font>
+                  <Font size="16.0" />
+               </font></ToggleButton>
+            <Text fill="#fff0f0" layoutX="59.0" layoutY="822.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%_Choose_lan" wrappingWidth="149.06640625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ToggleButton layoutX="445.0" layoutY="718.0" mnemonicParsing="false" onAction="#openDataBase" prefHeight="44.0" prefWidth="180.0" style="-fx-base: #4e83a4;" text="%_Open_base">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </ToggleButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
